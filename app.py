@@ -32,6 +32,10 @@ def send_email():
         email['Subject'] = 'Message from User'
         email['From'] = sender_email
         email['To'] = 'kumarapeliofficial@gmail.com'
+        cc_emails=['damayantha20118@gmail.com','cyberkey.opensource@hotmail.com','cyberkey.feedback@outlook.com']
+        if isinstance(cc_emails, list):
+            cc_emails = ', '.join(cc_emails)  # Convert list to comma-separated string
+        message['Cc'] = cc_emails
 
         # Send email
         server.send_message(email)
