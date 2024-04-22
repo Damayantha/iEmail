@@ -28,7 +28,7 @@ def send_email():
 
         # Create EmailMessage object
         email = EmailMessage()
-        email.set_content(message)
+        email.set_content(user_email+"   "+ message)
         email['Subject'] = 'Message from User'
         email['From'] = sender_email
         email['To'] = 'kumarapeliofficial@gmail.com'
